@@ -1,0 +1,40 @@
+<resources>
+    <dimen name="app_bar_height">190dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="pageTitleLargeTextSize">24sp</dimen>
+    <dimen name="pageTitleTextSize">18sp</dimen>
+    <dimen name="cardTitle">20sp</dimen>
+    <dimen name="paragraphText">14sp</dimen>
+    <dimen name="listItem">16sp</dimen>
+    <dimen name="contentTitleTextSize">14sp</dimen>
+    <dimen name="textInputs">16sp</dimen>
+    <dimen name="bodyText">14sp</dimen>
+    <dimen name="dashboardTimerTextSize">48sp</dimen>
+    <dimen name="modalText">16sp</dimen>
+    <dimen name="primaryText">14sp</dimen>
+    <dimen name="secondaryText">12sp</dimen>
+    <dimen name="smallText">10sp</dimen>
+    <dimen name="textButton">14sp</dimen>
+    <dimen name="buttonText">14sp</dimen>
+    <dimen name="cardButtonText">18sp</dimen>
+    <dimen name="tabText">14sp</dimen>
+    <dimen name="errorText">14sp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="timerLargeHour">32sp</dimen>
+    <dimen name="timerLargeText">16sp</dimen>
+    <dimen name="timerSmallHour">20sp</dimen>
+    <dimen name="timerSmallText">12sp</dimen>
+    <dimen name="number_width">24dp</dimen>
+    <dimen name="tableTextSize">12sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="cardLabelTextSize">14sp</dimen>
+    <dimen name="cardCornerRadius_big">32dp</dimen>
+    <dimen name="cardWidth_big">96dp</dimen>
+    <dimen name="cardHeight_big">96dp</dimen>
+
+</resources>
