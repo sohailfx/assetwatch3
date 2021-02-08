@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:paddingBottom="64dp">
+
+      <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:padding="16dp"
+          android:visibility="visible">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/rounded_button__primary_56"
+              android:gravity="center">
+
+              <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:tint="@color/tealColor"
+                app:srcCompat="@drawable/ic_captureasset" />
+            </RelativeLayout>
+
+            <TextView
+              style="@style/Subtitle2Text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:gravity="center_horizontal"
+              android:text="Capture"
+              android:textColor="@color/tealColor" />
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/rounded_button__primary_56"
+              android:gravity="center">
+
+              <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:tint="@color/tealColor"
+                app:srcCompat="@drawable/ic_reportadd" />
+            </RelativeLayout>
+
+            <TextView
+              style="@style/Subtitle2Text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:gravity="center_horizontal"
+              android:text="Report"
+              android:textColor="@color/tealColor" />
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/rounded_button__primary_56"
+              android:gravity="center">
+
+              <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:tint="@color/tealColor"
+                app:srcCompat="@drawable/ic_direction" />
+            </RelativeLayout>
+
+            <TextView
+              style="@style/Subtitle2Text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:gravity="center_horizontal"
+              android:text="Direction"
+              android:textColor="@color/tealColor" />
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+      </HorizontalScrollView>
+
+      <TextView
+        android:id="@+id/textView"
+        style="@style/Body2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Overview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/form_container"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="vertical"
+          android:paddingHorizontal="16dp">
+
+          <TextView
+            style="@style/FormLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Category" />
+
+          <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:entries="@array/categories" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="vertical"
+          android:paddingHorizontal="16dp">
+
+          <TextView
+            style="@style/FormLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Subcategory" />
+
+          <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:entries="@array/categories" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="vertical"
+          android:paddingHorizontal="16dp">
+
+          <TextView
+            style="@style/FormLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Container Number" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_read_input"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="4dp"
+              android:backgroundTint="@color/whiteColor"
+              android:scaleType="fitCenter"
+              android:src="@drawable/ic_scanasset"
+              android:tint="@color/themeColor" />
+
+            <ImageButton
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="8dp"
+              android:backgroundTint="@color/whiteColor"
+              android:scaleType="fitCenter"
+              android:src="@drawable/ic_rfidsignal" />
+
+            <EditText
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:background="#00000000"
+              android:hint="Enter Manually"
+              android:textSize="16dp" />
+          </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="vertical"
+          android:paddingHorizontal="16dp">
+
+          <TextView
+            style="@style/FormLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Serial Number" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_read_input"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="4dp"
+              android:backgroundTint="@color/whiteColor"
+              android:scaleType="fitCenter"
+              android:src="@drawable/ic_scanasset"
+              android:tint="@color/themeColor" />
+
+            <ImageButton
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="8dp"
+              android:backgroundTint="@color/whiteColor"
+              android:scaleType="fitCenter"
+              android:src="@drawable/ic_rfidsignal" />
+
+            <EditText
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:background="#00000000"
+              android:hint="Enter Manually"
+              android:textSize="16dp" />
+          </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="vertical"
+          android:paddingHorizontal="16dp">
+
+          <TextView
+            style="@style/FormLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Asset ID" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_read_input"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="4dp"
+              android:backgroundTint="@color/whiteColor"
+              android:scaleType="fitCenter"
+              android:src="@drawable/ic_scanasset"
+              android:tint="@color/themeColor" />
+
+            <ImageButton
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="8dp"
+              android:backgroundTint="@color/whiteColor"
+              android:scaleType="fitCenter"
+              android:src="@drawable/ic_rfidsignal" />
+
+            <EditText
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:background="#00000000"
+              android:hint="Enter Manually"
+              android:textSize="16dp" />
+          </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="vertical"
+          android:paddingHorizontal="16dp">
+
+          <TextView
+            style="@style/FormLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Device Type" />
+
+          <TextView
+            style="@style/FormValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="GT1200" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="vertical"
+          android:paddingHorizontal="16dp">
+
+          <TextView
+            style="@style/FormLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Device ID" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_read_input"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="4dp"
+              android:backgroundTint="@color/whiteColor"
+              android:scaleType="fitCenter"
+              android:src="@drawable/ic_scanasset"
+              android:tint="@color/themeColor" />
+
+            <ImageButton
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="8dp"
+              android:backgroundTint="@color/whiteColor"
+              android:scaleType="fitCenter"
+              android:src="@drawable/ic_rfidsignal" />
+
+            <EditText
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:background="#00000000"
+              android:hint="Enter Manually"
+              android:textSize="16dp" />
+          </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="vertical"
+          android:paddingHorizontal="16dp">
+
+          <TextView
+            style="@style/FormLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Device Type 2" />
+
+          <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:entries="@array/categories" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="vertical"
+          android:paddingHorizontal="16dp">
+
+          <TextView
+            style="@style/FormLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Alternate Tag ID" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_read_input"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="4dp"
+              android:backgroundTint="@color/whiteColor"
+              android:scaleType="fitCenter"
+              android:src="@drawable/ic_scanasset"
+              android:tint="@color/themeColor" />
+
+            <ImageButton
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="8dp"
+              android:backgroundTint="@color/whiteColor"
+              android:scaleType="fitCenter"
+              android:src="@drawable/ic_rfidsignal" />
+
+            <EditText
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:background="#00000000"
+              android:hint="Enter Manually"
+              android:textSize="16dp" />
+          </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="vertical"
+          android:paddingHorizontal="16dp">
+
+          <TextView
+            style="@style/FormLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Active Status" />
+
+          <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:entries="@array/categories" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="vertical"
+          android:paddingHorizontal="16dp">
+
+          <TextView
+            style="@style/FormLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Disposition" />
+
+          <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:entries="@array/categories" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="vertical"
+          android:paddingHorizontal="16dp">
+
+          <TextView
+            style="@style/FormLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Comments" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/comments_input"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:background="#00000000"
+              android:hint="Enter Manually"
+              android:textSize="16dp" />
+          </LinearLayout>
+
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_button">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:letterSpacing="0.1"
+          android:text="SAVE"
+          android:textColor="@color/whiteColor"
+          android:textSize="18dp"
+          android:textStyle="bold" />
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+
+</LinearLayout>

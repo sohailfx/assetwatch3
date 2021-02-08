@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories">
+        <item>Admin</item>
+        <item>User</item>
+        <item>Guest</item>
+        <item>Customer Support</item>
+        <item>Technical Support</item>
+        <item>Factory User</item>
+        <item>Manager</item>
+    </string-array>
+</resources>
