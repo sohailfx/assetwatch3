@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/cardSelectedBackground_color" android:state_selected="true"></item>
+    <item android:color="@color/cardPressedBackground_color" android:state_pressed="true"></item>
+    <item android:color="@color/cardBackground_color"></item>
+    <corners android:radius="16dp" ></corners>
+    <size android:height="128dp" android:width="128dp"></size>
+    <padding android:top="32dp" android:right="32dp" android:bottom="32dp" android:left="32dp"></padding>
+</selector>

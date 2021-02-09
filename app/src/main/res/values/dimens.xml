@@ -32,9 +32,10 @@
   <dimen name="activity_vertical_margin">16dp</dimen>
   <dimen name="appbar_padding">16dp</dimen>
   <dimen name="appbar_padding_top">8dp</dimen>
-  <dimen name="cardLabelTextSize">14sp</dimen>
-  <dimen name="cardCornerRadius_big">32dp</dimen>
-  <dimen name="cardWidth_big">96dp</dimen>
-  <dimen name="cardHeight_big">96dp</dimen>
+  <dimen name="button_label_text_size">14sp</dimen>
+  <dimen name="button_radius_big">32dp</dimen>
+  <dimen name="button_width_big">96dp</dimen>
+  <dimen name="button_height_big">96dp</dimen>
+  <dimen name="button_row_gap">24dp</dimen>
 
 </resources>

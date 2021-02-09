@@ -35,13 +35,14 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
             android:layout_weight="1"
+            android:clickable="true"
             android:gravity="center"
             android:orientation="vertical">
 
             <RelativeLayout
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:background="@drawable/rounded_button__primary_56"
+              android:background="@drawable/rounded_button_primary_56"
               android:gravity="center">
 
               <ImageView
@@ -64,17 +65,19 @@
           </LinearLayout>
 
           <LinearLayout
+            android:id="@+id/report_button_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
             android:layout_weight="1"
+            android:clickable="true"
             android:gravity="center"
             android:orientation="vertical">
 
             <RelativeLayout
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:background="@drawable/rounded_button__primary_56"
+              android:background="@drawable/rounded_button_primary_56"
               android:gravity="center">
 
               <ImageView
@@ -101,13 +104,16 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
             android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
             android:gravity="center"
             android:orientation="vertical">
 
             <RelativeLayout
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:background="@drawable/rounded_button__primary_56"
+              android:background="@drawable/rounded_button_primary_56"
               android:gravity="center">
 
               <ImageView

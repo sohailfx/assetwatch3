@@ -45,7 +45,7 @@
                   android:layout_width="24dp"
                   android:layout_height="24dp"
                   android:layout_centerInParent="true"
-                  android:tint="@color/darkBlueColor"
+                  android:tint="@color/pinkColor"
                   app:srcCompat="@drawable/ic_installtionreport" />
               </RelativeLayout>
             </LinearLayout>
@@ -137,7 +137,7 @@
                   android:layout_width="24dp"
                   android:layout_height="24dp"
                   android:layout_centerInParent="true"
-                  android:tint="@color/darkGreenColor"
+                  android:tint="@color/greenColor"
                   app:srcCompat="@drawable/ic_entry" />
               </RelativeLayout>
             </LinearLayout>
@@ -413,7 +413,7 @@
                   android:layout_width="24dp"
                   android:layout_height="24dp"
                   android:layout_centerInParent="true"
-                  android:tint="@color/darkBlueColor"
+                  android:tint="@color/pinkColor"
                   app:srcCompat="@drawable/ic_installtionreport" />
               </RelativeLayout>
             </LinearLayout>

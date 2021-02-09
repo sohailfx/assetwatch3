@@ -19,10 +19,19 @@ public class AssetsFragment extends Fragment {
       container, false);
 
     LinearLayout edit_button =view.findViewById(R.id.edit_button_id);
+    LinearLayout report_button=view.findViewById(R.id.report_button_id);
     edit_button.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
         Intent intent = new Intent(getActivity(), activity_edit_asset.class);
+        startActivity(intent);
+      }
+    });
+
+    report_button.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        Intent intent = new Intent(getActivity(), report_create_activity.class);
         startActivity(intent);
       }
     });

@@ -50,6 +50,7 @@
 
           <LinearLayout
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="16dp"
@@ -59,6 +60,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginHorizontal="8dp"
+              android:clickable="true"
               android:gravity="center"
               android:orientation="vertical">
 
@@ -98,6 +100,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginHorizontal="8dp"
+              android:clickable="true"
               android:gravity="center"
               android:orientation="vertical">
 
@@ -129,13 +132,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="80" />
+                android:text="15" />
             </LinearLayout>
 
             <LinearLayout
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginHorizontal="8dp"
+              android:clickable="true"
               android:gravity="center"
               android:orientation="vertical">
 
@@ -168,13 +172,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:gravity="center_horizontal"
-                android:text="80" />
+                android:text="20" />
             </LinearLayout>
 
             <LinearLayout
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginHorizontal="8dp"
+              android:clickable="true"
               android:gravity="center"
               android:orientation="vertical">
 
@@ -207,13 +212,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:gravity="center_horizontal"
-                android:text="80" />
+                android:text="10" />
             </LinearLayout>
 
             <LinearLayout
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginHorizontal="8dp"
+              android:clickable="true"
               android:gravity="center"
               android:orientation="vertical">
 
@@ -246,7 +252,46 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:gravity="center_horizontal"
-                android:text="80" />
+                android:text="35" />
+            </LinearLayout>
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginHorizontal="8dp"
+              android:clickable="true"
+              android:gravity="center"
+              android:orientation="vertical">
+
+              <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_40"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                  android:layout_width="24dp"
+                  android:layout_height="24dp"
+                  android:layout_gravity="center_horizontal|center_vertical"
+                  android:tint="@color/darkGreenColor"
+                  app:srcCompat="@drawable/ic_new_asset" />
+              </RelativeLayout>
+
+              <TextView
+                style="@style/CaptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="New" />
+
+              <TextView
+                style="@style/Subtitle2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="25" />
             </LinearLayout>
           </LinearLayout>
 
@@ -382,13 +427,13 @@
                       android:layout_marginHorizontal="8dp"
                       android:layout_weight="1"
                       android:gravity="center"
-
+                      android:clickable="true"
                       android:orientation="vertical">
 
                       <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/rounded_button__primary_56"
+                        android:background="@drawable/rounded_button_primary_56"
                         android:gravity="center">
 
                         <ImageView
@@ -421,7 +466,7 @@
                       <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/rounded_button__primary_56"
+                        android:background="@drawable/rounded_button_primary_56"
                         android:gravity="center">
 
                         <ImageView
@@ -444,17 +489,19 @@
                     </LinearLayout>
 
                     <LinearLayout
+                      android:id="@+id/report_button_id"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:layout_marginHorizontal="8dp"
                       android:layout_weight="1"
+                      android:clickable="true"
                       android:gravity="center"
                       android:orientation="vertical">
 
                       <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/rounded_button__primary_56"
+                        android:background="@drawable/rounded_button_primary_56"
                         android:gravity="center">
 
                         <ImageView
@@ -487,7 +534,7 @@
                       <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/rounded_button__primary_56"
+                        android:background="@drawable/rounded_button_primary_56"
                         android:gravity="center">
 
                         <ImageView
@@ -818,11 +865,11 @@
     android:layout_marginEnd="16dp"
     android:layout_marginRight="16dp"
     android:layout_marginBottom="72dp"
-    android:tint="@color/whiteColor"
     app:backgroundTint="@color/themeColor"
     app:layout_anchor="@id/assetContent_id"
     app:layout_anchorGravity="bottom|end"
-    app:srcCompat="@drawable/ic_scanasset" />
+    app:srcCompat="@drawable/ic_scanasset"
+    app:tint="@color/whiteColor" />
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton
     android:id="@+id/fab2"
@@ -831,9 +878,9 @@
     android:layout_marginEnd="16dp"
     android:layout_marginRight="16dp"
     android:layout_marginBottom="144dp"
-    android:tint="@color/whiteColor"
     app:backgroundTint="@color/tealColor"
     app:layout_anchor="@id/assetContent_id"
     app:layout_anchorGravity="bottom|end"
-    app:srcCompat="@drawable/ic_addasset" />
+    app:srcCompat="@drawable/ic_addasset"
+    app:tint="@android:color/white" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
