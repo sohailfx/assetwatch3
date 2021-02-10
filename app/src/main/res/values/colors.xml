@@ -32,5 +32,6 @@
   <color name="cardBackground_color">@color/tealColor</color>
   <color name="cardPressedBackground_color">@color/themeColor</color>
   <color name="cardSelectedBackground_color">@color/darkBlueColor</color>
+  <color name="black_overlay">#66000000</color>
 </resources>
 

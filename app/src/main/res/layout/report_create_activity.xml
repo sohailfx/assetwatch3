@@ -383,10 +383,10 @@
                 android:layout_marginHorizontal="8dp">
 
                 <RelativeLayout
-                  android:id="@+id/relativeLayout"
+                  android:id="@+id/thumbnail_image_1"
                   android:layout_width="96dp"
                   android:layout_height="96dp"
-
+                  android:clickable="true"
                   android:background="@drawable/thumb_nail_container"
                   android:gravity="center"
                   app:layout_constraintBottom_toBottomOf="parent"
@@ -409,10 +409,10 @@
                   android:background="@drawable/small_close_button"
                   android:gravity="center"
                   android:padding="4dp"
-                  app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
-                  app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
-                  app:layout_constraintStart_toEndOf="@+id/relativeLayout"
-                  app:layout_constraintTop_toTopOf="@+id/relativeLayout">
+                  app:layout_constraintBottom_toTopOf="@+id/thumbnail_image_1"
+                  app:layout_constraintEnd_toEndOf="@+id/thumbnail_image_1"
+                  app:layout_constraintStart_toEndOf="@+id/thumbnail_image_1"
+                  app:layout_constraintTop_toTopOf="@+id/thumbnail_image_1">
 
                   <ImageView
                     android:layout_width="match_parent"
@@ -601,22 +601,21 @@
 
       </LinearLayout>
 
-      <LinearLayout
+      <android.widget.Button
+        android:id="@+id/preview_button_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="16dp"
-        android:background="@drawable/rounded_button">
+        android:paddingHorizontal="32dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Preview"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/whiteColor"
+        android:background="@drawable/button_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webView" />
 
-        <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:letterSpacing="0.1"
-          android:text="SAVE"
-          android:textColor="@color/whiteColor"
-          android:textSize="18dp"
-          android:textStyle="bold" />
-      </LinearLayout>
 
     </LinearLayout>
   </androidx.core.widget.NestedScrollView>
