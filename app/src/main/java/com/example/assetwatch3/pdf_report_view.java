@@ -41,8 +41,15 @@ public class pdf_report_view extends AppCompatActivity {
   mWebView.setWebViewClient(new WebViewClient() {
    @Override
    public boolean shouldOverrideUrlLoading(WebView view, String finalUrl) {
+
     view.loadUrl(finalUrl);
     return true;
+   }
+
+   public void onPageFinished(WebView view, String finalUrl) {
+    if (view.getTitle().equals("")) {
+     view.loadUrl(finalUrl);
+    }
    }
   });
 
@@ -57,6 +64,7 @@ public class pdf_report_view extends AppCompatActivity {
    }
   });
  }
+
  @Override
  public boolean onSupportNavigateUp() {
   onBackPressed();

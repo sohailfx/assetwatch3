@@ -7,6 +7,11 @@
     <item name="colorAccent">@color/tealColor</item>
   </style>
 
+  <style name="Headline5Text">
+    <item name="android:textSize">24sp</item>
+    <item name="android:textColor">@color/colorPrimary</item>
+  </style>
+
   <style name="Headline6Text">
     <item name="android:textSize">18sp</item>
     <item name="android:textColor">@color/colorPrimary</item>
@@ -50,6 +55,11 @@
     <item name="android:textColor">@color/themeColor</item>
   </style>
 
+  <style name="FormContainerLabel">
+    <item name="android:textSize">16sp</item>
+    <item name="android:textColor">@color/colorPrimary</item>
+  </style>
+
   <style name="FormValue">
     <item name="android:textSize">16sp</item>
     <item name="android:textColor">@color/colorPrimary</item>
@@ -60,8 +70,8 @@
   </style>
 
   <style name="ExpandedToolBarTitleTheme" parent="android:TextAppearance">
-    <item name="android:textColor">@color/whiteColor</item>
-    <item name="android:textSize">24sp</item>
+    <item name="android:textColor">@color/naturalWhite</item>
+    <item name="android:textSize">32sp</item>
     <item name="android:textStyle">bold</item>
   </style>
 
@@ -71,6 +81,17 @@
     <item name="android:textSize">20sp</item>
   </style>
 
+  <style name="ExpandedToolBarTitleTheme2" parent="android:TextAppearance">
+    <item name="android:textColor">@color/blackColor</item>
+    <item name="android:textSize">32sp</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="CollapsedToolBarTitleTheme2" parent="android:TextAppearance">
+    <item name="android:homeAsUpIndicator">@color/blackColor</item>
+    <item name="android:textColor">@color/blackColor</item>
+    <item name="android:textSize">20sp</item>
+  </style>
   <style name="MyThemeOverlay_Toolbar2" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
 
     <!-- This attributes is used by navigation icon and overflow icon -->

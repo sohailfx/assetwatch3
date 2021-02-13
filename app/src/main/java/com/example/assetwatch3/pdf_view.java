@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.ProgressBar;
 
 public class pdf_view extends AppCompatActivity {
@@ -18,6 +20,14 @@ public class pdf_view extends AppCompatActivity {
   super.onCreate(savedInstanceState);
   setContentView(R.layout.pdf_view);
   Toolbar toolbar = findViewById(R.id.toolbar_id);
+  Button mButton = findViewById(R.id.savePDF_button_id);
+  mButton.setOnClickListener(new View.OnClickListener() {
+   @Override
+   public void onClick(View view) {
+    Intent intent = new Intent(pdf_view.this, MainActivity.class);
+    startActivity(intent);
+   }
+  });
   setSupportActionBar(toolbar);
   getSupportActionBar().setDisplayHomeAsUpEnabled(true);
   getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -40,12 +50,21 @@ public class pdf_view extends AppCompatActivity {
   mWebView.setWebViewClient(new WebViewClient() {
    @Override
    public boolean shouldOverrideUrlLoading(WebView view, String finalUrl) {
+
     view.loadUrl(finalUrl);
     return true;
    }
+
+   public void onPageFinished(WebView view, String finalUrl) {
+    if (view.getTitle().equals("")) {
+     view.loadUrl(finalUrl);
+    }
+   }
   });
 
+
   mWebView.setWebChromeClient(new WebChromeClient() {
+
    public void onProgressChanged(WebView view, int progress) {
     if (progress < 100) {
      progressDialog.show();
@@ -56,6 +75,7 @@ public class pdf_view extends AppCompatActivity {
    }
   });
  }
+
  @Override
  public boolean onSupportNavigateUp() {
   onBackPressed();

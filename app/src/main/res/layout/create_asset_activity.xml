@@ -4,10 +4,21 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:fitsSystemWindows="true"
-  android:orientation="vertical">
+  android:background="@color/backgroundColor"
+  android:orientation="vertical"
+  tools:context=".create_asset_activity">
 
-  <androidx.core.widget.NestedScrollView
+  <androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar_id"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/backgroundColor"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:title="Add Asset" />
+
+  <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -15,134 +26,7 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:orientation="vertical"
-      android:paddingBottom="120dp"
-      app:layout_collapseMode="pin"
-
-      app:layout_scrollFlags="scroll|enterAlways">
-
-      <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fillViewport="true"
-        android:scrollbars="none">
-
-        <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:orientation="horizontal"
-          android:padding="16dp"
-          android:visibility="visible">
-
-          <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <RelativeLayout
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:background="@drawable/rounded_button_primary_56"
-              android:gravity="center">
-
-              <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:tint="@color/tealColor"
-                app:srcCompat="@drawable/ic_captureasset" />
-            </RelativeLayout>
-
-            <TextView
-              style="@style/Subtitle2Text"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="8dp"
-              android:gravity="center_horizontal"
-              android:text="Capture"
-              android:textColor="@color/tealColor" />
-
-          </LinearLayout>
-
-          <LinearLayout
-            android:id="@+id/report_button_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <RelativeLayout
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:background="@drawable/rounded_button_primary_56"
-              android:gravity="center">
-
-              <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:tint="@color/tealColor"
-                app:srcCompat="@drawable/ic_reportadd" />
-            </RelativeLayout>
-
-            <TextView
-              style="@style/Subtitle2Text"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="8dp"
-              android:gravity="center_horizontal"
-              android:text="Report"
-              android:textColor="@color/tealColor" />
-
-          </LinearLayout>
-
-          <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <RelativeLayout
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:background="@drawable/rounded_button_primary_56"
-              android:gravity="center">
-
-              <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:tint="@color/tealColor"
-                app:srcCompat="@drawable/ic_direction" />
-            </RelativeLayout>
-
-            <TextView
-              style="@style/Subtitle2Text"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="8dp"
-              android:gravity="center_horizontal"
-              android:text="Direction"
-              android:textColor="@color/tealColor" />
-
-          </LinearLayout>
-
-        </LinearLayout>
-
-      </HorizontalScrollView>
+      android:paddingVertical="16dp">
 
       <TextView
         android:id="@+id/textView"
@@ -600,7 +484,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/webView" />
-
     </LinearLayout>
-  </androidx.core.widget.NestedScrollView>
+  </ScrollView>
 </LinearLayout>

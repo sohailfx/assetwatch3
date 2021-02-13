@@ -5,6 +5,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   tools:context=".pdf_view">
+
   <androidx.appcompat.widget.Toolbar
     android:id="@+id/toolbar_id"
     android:layout_width="match_parent"
@@ -14,6 +15,7 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     app:title="Report Preview" />
+
   <WebView
     android:id="@+id/webView"
     android:layout_width="0dp"
@@ -21,14 +23,16 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/toolbar_id" />
+
   <android.widget.Button
+    android:id="@+id/savePDF_button_id"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:background="@drawable/button_container"
     android:paddingHorizontal="32dp"
     android:text="Save and Close"
-    android:layout_marginTop="24dp"
     android:textColor="@color/whiteColor"
-    android:background="@drawable/button_container"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/webView" />

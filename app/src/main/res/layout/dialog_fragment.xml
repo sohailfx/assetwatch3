@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/dialog_layout_id"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/dialog_container"
+  android:orientation="vertical"
+  android:paddingBottom="32dp"
+  tools:context=".dialog_fragment">
+
+  <TextView
+    style="@style/Headline5Text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:text="Create Report" />
+
+  <TextView
+    style="@style/FormContainerLabel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:text="Report Type" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="@color/naturalWhite"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/installation_report_button_id"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:clickable="true"
+      app:cardBackgroundColor="@android:color/transparent"
+      app:cardElevation="0dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:tint="@color/pinkColor"
+            app:srcCompat="@drawable/ic_installtionreport" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="24dp"
+          android:layout_weight="1"
+          android:gravity="center_vertical"
+          android:orientation="vertical">
+
+          <TextView
+            style="@style/Headline6Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="Installation Report" />
+
+          <TextView
+            style="@style/Body2Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sample description about this " />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/icon_container_40"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:tint="@color/colorPrimaryLight"
+            app:srcCompat="@drawable/ic_angleright" />
+        </LinearLayout>
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginLeft="80dp"
+      android:layout_marginRight="16dp"
+      android:background="@color/borderColor" />
+
+    <com.google.android.material.card.MaterialCardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:clickable="true"
+      app:cardBackgroundColor="@android:color/transparent"
+      app:cardElevation="0dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:tint="@color/greenColor"
+            app:srcCompat="@drawable/ic_entry" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="24dp"
+          android:layout_weight="1"
+          android:gravity="center_vertical"
+          android:orientation="vertical">
+
+          <TextView
+            style="@style/Headline6Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="Entry Report" />
+
+          <TextView
+            style="@style/Body2Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sample description about this " />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/icon_container_40"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:tint="@color/colorPrimaryLight"
+            app:srcCompat="@drawable/ic_angleright" />
+        </LinearLayout>
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginLeft="80dp"
+      android:layout_marginRight="16dp"
+      android:background="@color/borderColor" />
+
+    <com.google.android.material.card.MaterialCardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:clickable="true"
+      app:cardBackgroundColor="@android:color/transparent"
+      app:cardElevation="0dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:tint="@color/orangeColor"
+            app:srcCompat="@drawable/ic_exit" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="24dp"
+          android:layout_weight="1"
+          android:gravity="center_vertical"
+          android:orientation="vertical">
+
+          <TextView
+            style="@style/Headline6Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="Exit Report" />
+
+          <TextView
+            style="@style/Body2Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sample description about this " />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/icon_container_40"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:tint="@color/colorPrimaryLight"
+            app:srcCompat="@drawable/ic_angleright" />
+        </LinearLayout>
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginLeft="80dp"
+      android:layout_marginRight="16dp"
+      android:background="@color/borderColor" />
+
+    <com.google.android.material.card.MaterialCardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:clickable="true"
+      app:cardBackgroundColor="@android:color/transparent"
+      app:cardElevation="0dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:tint="@color/redColor"
+            app:srcCompat="@drawable/ic_damagedreport" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="24dp"
+          android:layout_weight="1"
+          android:gravity="center_vertical"
+          android:orientation="vertical">
+
+          <TextView
+            style="@style/Headline6Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="Damaged Report" />
+
+          <TextView
+            style="@style/Body2Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sample description about this " />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/icon_container_40"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:tint="@color/colorPrimaryLight"
+            app:srcCompat="@drawable/ic_angleright" />
+        </LinearLayout>
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+  </LinearLayout>
+
+
+</LinearLayout>
