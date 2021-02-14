@@ -33,6 +33,7 @@
       android:layout_height="match_parent"
       android:orientation="vertical"
       android:paddingBottom="128dp">
+
       <LinearLayout
         android:id="@+id/filter_bar_id"
         android:layout_width="match_parent"
@@ -304,6 +305,7 @@
           android:layout_alignParentBottom="true"
           android:background="@drawable/border_bottom" />
       </LinearLayout>
+
       <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/AssetList_rv_id"
         android:layout_width="match_parent"
@@ -316,13 +318,13 @@
   </androidx.core.widget.NestedScrollView>
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton
-    android:id="@+id/fab1"
+    android:id="@+id/scanAsset_button_id"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginEnd="16dp"
     android:layout_marginRight="16dp"
     android:layout_marginBottom="72dp"
-    app:backgroundTint="@color/themeColor"
+    app:backgroundTint="@color/darkTealColor"
     app:layout_anchor="@id/assetContent_id"
     app:layout_anchorGravity="bottom|end"
     app:srcCompat="@drawable/ic_scanasset"

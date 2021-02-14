@@ -1,7 +1,12 @@
 package com.example.assetwatch3;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +37,8 @@ public class AssetsFragment extends Fragment {
  private RecyclerView.LayoutManager mAssetList_layoutManager;
  private String jsonFileName = "vehicles.json";
  private String jsonFileName2 = "containers.json";
- private FloatingActionButton addAssetButton;
+ private FloatingActionButton addAssetButton, scanAsset_button;
+ Dialog mDialog;
 
  @Nullable
  @Override
@@ -56,6 +62,8 @@ public class AssetsFragment extends Fragment {
   });
 
   addAssetButton = view.findViewById(R.id.add_asset_button_id);
+  scanAsset_button = view.findViewById(R.id.scanAsset_button_id);
+
   addAssetButton.setOnClickListener(new View.OnClickListener() {
    @Override
    public void onClick(View view) {
@@ -63,6 +71,30 @@ public class AssetsFragment extends Fragment {
     startActivity(myIntent);
    }
   });
+
+  scanAsset_button.setOnClickListener(new View.OnClickListener() {
+   @Override
+   public void onClick(View view) {
+    mDialog.show();
+
+    final Handler handler = new Handler(Looper.getMainLooper());
+    handler.postDelayed(new Runnable() {
+     @Override
+     public void run() {
+      Intent myIntent = new Intent(getActivity(), activity_edit_asset.class);
+      startActivity(myIntent);
+      mDialog.dismiss();
+     }
+    }, 1000);
+   }
+  });
+
+  View view2 = getLayoutInflater().inflate(R.layout.scan_asset_dialog, null);
+
+  mDialog = new Dialog(getContext(), android.R.style.Theme_DeviceDefault_NoActionBar_Fullscreen);
+  mDialog.setContentView(view2);
+  mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
   return view;
 
  }

@@ -41,7 +41,10 @@
       android:clickable="true"
       app:cardBackgroundColor="@android:color/transparent"
       app:cardElevation="0dp">
-
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -101,16 +104,17 @@
             app:srcCompat="@drawable/ic_angleright" />
         </LinearLayout>
       </LinearLayout>
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_marginLeft="80dp"
+          android:layout_marginRight="16dp"
+          android:background="@color/borderColor" />
+      </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <View
-      android:layout_width="match_parent"
-      android:layout_height="1dp"
-      android:layout_marginLeft="80dp"
-      android:layout_marginRight="16dp"
-      android:background="@color/borderColor" />
-
     <com.google.android.material.card.MaterialCardView
+      android:id="@+id/entry_report_button_id"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:clickable="true"
@@ -186,6 +190,7 @@
       android:background="@color/borderColor" />
 
     <com.google.android.material.card.MaterialCardView
+      android:id="@+id/exit_report_button_id"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:clickable="true"
@@ -261,6 +266,7 @@
       android:background="@color/borderColor" />
 
     <com.google.android.material.card.MaterialCardView
+      android:id="@+id/damage_report_button_id"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:clickable="true"

@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 
@@ -21,7 +20,7 @@ import androidx.fragment.app.Fragment;
 public class Overview_fragment extends Fragment {
  private static final String TAG = "Over view fragment";
  private Button mSaveButton;
- private CardView mCardView;
+ private CardView mInstallation_report_button, mEntry_report_button, mExit_report_button, mDamage_report_button;
 
 
  Dialog mDialog;
@@ -40,23 +39,39 @@ public class Overview_fragment extends Fragment {
   final LinearLayout report_button = view.findViewById(R.id.report_button_id);
   LinearLayout frameLayout;
   frameLayout = view2.findViewById(R.id.dialog_layout_id);
-  mCardView = view2.findViewById(R.id.installation_report_button_id);
+  mInstallation_report_button = view2.findViewById(R.id.installation_report_button_id);
+  mEntry_report_button = view2.findViewById(R.id.entry_report_button_id);
+  mExit_report_button = view2.findViewById(R.id.exit_report_button_id);
+  mDamage_report_button = view2.findViewById(R.id.damage_report_button_id);
+
   mSaveButton = view.findViewById(R.id.save_button_id);
 
   report_button.setOnClickListener(new View.OnClickListener() {
    @Override
    public void onClick(View view) {
-//    Intent intent = new Intent(getActivity(), report_create_activity.class);
-//    startActivity(intent);
-//    report_dialog rd = new report_dialog();
-//    new report_dialog().show(
-//      getParentFragmentManager(), "test");
-
     mDialog.show();
-
    }
   });
-  mCardView.setOnClickListener(new View.OnClickListener() {
+
+  mInstallation_report_button.setOnClickListener(new View.OnClickListener() {
+   @Override
+   public void onClick(View view) {
+    gotoCreateReport();
+   }
+  });
+  mEntry_report_button.setOnClickListener(new View.OnClickListener() {
+   @Override
+   public void onClick(View view) {
+    gotoCreateReport();
+   }
+  });
+  mExit_report_button.setOnClickListener(new View.OnClickListener() {
+   @Override
+   public void onClick(View view) {
+    gotoCreateReport();
+   }
+  });
+  mDamage_report_button.setOnClickListener(new View.OnClickListener() {
    @Override
    public void onClick(View view) {
     gotoCreateReport();

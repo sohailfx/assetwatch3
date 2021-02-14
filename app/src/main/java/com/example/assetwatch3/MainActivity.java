@@ -15,13 +15,10 @@ public class MainActivity extends AppCompatActivity {
  protected void onCreate(Bundle savedInstanceState) {
   super.onCreate(savedInstanceState);
   setContentView(R.layout.activity_main);
-
   BottomNavigationView bottomView = findViewById(R.id.bottom_navigation);
   bottomView.setOnNavigationItemSelectedListener(navListener);
   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AssetsFragment()).commit();
-
   bottomView.getMenu().findItem(R.id.nav_assets).setChecked(true);
-
  }
 
  private BottomNavigationView.OnNavigationItemSelectedListener navListener =
