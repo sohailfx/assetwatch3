@@ -12,18 +12,22 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
     <activity
+      android:name=".login_activity"
+      android:theme="@style/AppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+
+    </activity>
+    <activity
       android:name=".receiving_assets_activity"
-      android:label="@string/title_activity_receiving_assets_activity"
-      android:theme="@style/AppTheme.NoActionBar"></activity>
+      android:theme="@style/AppTheme.NoActionBar" />
     <activity
       android:name=".dashboard_activity"
       android:label="@string/title_activity_dashboard_activity"
       android:theme="@style/AppTheme.NoActionBar">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
     </activity>
     <activity android:name=".create_asset_activity" />
     <activity android:name=".pdf_report_view" />

@@ -70,7 +70,7 @@
   </style>
 
   <style name="ExpandedToolBarTitleTheme" parent="android:TextAppearance">
-    <item name="android:textColor">@color/naturalWhite</item>
+    <item name="android:textColor">@color/blackColor</item>
     <item name="android:textSize">32sp</item>
     <item name="android:textStyle">bold</item>
   </style>
