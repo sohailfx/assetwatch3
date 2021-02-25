@@ -4,7 +4,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Asset_Item_Model implements Parcelable {
-  private int mAssetStatus_Image;
   private String mAssetNumber_tv;
   private String mAssetReadTime_tv;
   private String mAssetSubCategory_tv;
@@ -13,13 +12,11 @@ public class Asset_Item_Model implements Parcelable {
 
 
   public Asset_Item_Model(
-    int assetStatus_Image,
     String assetNumber_tv,
     String assetReadTime_tv,
     String assetSubCategory_tv,
     String assetDescription,
     String assetStatusString) {
-    mAssetStatus_Image = assetStatus_Image;
     mAssetNumber_tv = assetNumber_tv;
     mAssetReadTime_tv = assetReadTime_tv;
     mAssetSubCategory_tv = assetSubCategory_tv;
@@ -28,7 +25,6 @@ public class Asset_Item_Model implements Parcelable {
   }
 
   protected Asset_Item_Model(Parcel in) {
-    mAssetStatus_Image = in.readInt();
     mAssetNumber_tv = in.readString();
     mAssetReadTime_tv = in.readString();
     mAssetSubCategory_tv = in.readString();
@@ -47,9 +43,6 @@ public class Asset_Item_Model implements Parcelable {
     }
   };
 
-  public int getAssetStatus_Image() {
-    return mAssetStatus_Image;
-  }
 
   public String getAssetNumber_tv() {
     return mAssetNumber_tv;
@@ -78,7 +71,6 @@ public class Asset_Item_Model implements Parcelable {
 
   @Override
   public void writeToParcel(Parcel parcel, int i) {
-    parcel.writeInt(mAssetStatus_Image);
     parcel.writeString(mAssetNumber_tv);
     parcel.writeString(mAssetDescription_tv);
     parcel.writeString(mAssetSubCategory_tv);

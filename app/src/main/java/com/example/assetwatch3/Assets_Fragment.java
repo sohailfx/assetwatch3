@@ -7,7 +7,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,7 +28,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class AssetsFragment extends Fragment {
+public class Assets_Fragment extends Fragment {
 
  private ArrayList<Asset_Item_Model> mAssetList_array;
  private RecyclerView mAssetList_rv;
@@ -43,7 +42,7 @@ public class AssetsFragment extends Fragment {
  @Nullable
  @Override
  public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-  View view = inflater.inflate(R.layout.fragment_assets,
+  View view = inflater.inflate(R.layout.assets_fragment,
     container, false);
   getDataFromJson();
   mAssetList_rv = (RecyclerView) view.findViewById(R.id.AssetList_rv_id);
@@ -123,7 +122,6 @@ public class AssetsFragment extends Fragment {
     JSONObject itemObject = jsonArray.getJSONObject(i);
     int asset_status = getAssetStatusID(itemObject.getString("status"));
     mAssetList_array.add(new Asset_Item_Model(
-        asset_status,
         itemObject.getString("id"),
         itemObject.getString("readtime"),
         itemObject.getString("subcategory"),

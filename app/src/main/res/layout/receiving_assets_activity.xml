@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="true"
+  tools:context=".receiving_assets_activity">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/app_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/app_bar_height"
+    android:fitsSystemWindows="true"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+      android:id="@+id/toolbar_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fitsSystemWindows="true"
+      app:contentScrim="?attr/colorPrimary"
+      app:layout_scrollFlags="scroll|exitUntilCollapsed"
+      app:toolbarId="@+id/toolbar">
+
+      <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".receiving_assets_activity"
+    tools:showIn="@layout/receiving_assets_activity">
+
+    <LinearLayout
+      android:id="@+id/outer_layout_id"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:id="@+id/filter_bar_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <HorizontalScrollView
+          android:id="@+id/hsv"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:fillViewport="true"
+          android:scrollbars="none">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:visibility="visible">
+
+            <LinearLayout
+              android:layout_width="64dp"
+              android:layout_height="wrap_content"
+              android:background="@color/button_state_bgcolor"
+              android:clickable="true"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingHorizontal="4dp">
+
+              <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_40"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                  android:layout_width="24dp"
+                  android:layout_height="24dp"
+                  android:layout_gravity="center_horizontal|center_vertical"
+                  android:tint="@color/greyColor"
+                  app:srcCompat="@drawable/ic_allassets" />
+              </RelativeLayout>
+
+              <TextView
+                style="@style/CaptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="All" />
+
+              <TextView
+                style="@style/Subtitle2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="80" />
+            </LinearLayout>
+
+            <LinearLayout
+              android:layout_width="64dp"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingHorizontal="4dp">
+
+              <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_40"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                  android:layout_width="24dp"
+                  android:layout_height="24dp"
+                  android:layout_gravity="center_horizontal|center_vertical"
+                  android:tint="@color/darkGreenColor"
+                  app:srcCompat="@drawable/ic_new_asset" />
+              </RelativeLayout>
+
+              <TextView
+                style="@style/CaptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="New" />
+
+              <TextView
+                style="@style/Subtitle2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="25" />
+            </LinearLayout>
+
+            <LinearLayout
+              android:layout_width="64dp"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingHorizontal="4dp">
+
+              <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_40"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                  android:layout_width="24dp"
+                  android:layout_height="24dp"
+                  android:layout_gravity="center_horizontal|center_vertical"
+                  android:tint="@color/pinkColor"
+                  app:srcCompat="@drawable/ic_tagging" />
+              </RelativeLayout>
+
+              <TextView
+                style="@style/CaptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="Tag" />
+
+              <TextView
+                style="@style/Subtitle2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="15" />
+            </LinearLayout>
+
+            <LinearLayout
+              android:layout_width="64dp"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingHorizontal="4dp">
+
+              <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_40"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                  android:layout_width="24dp"
+                  android:layout_height="24dp"
+                  android:layout_gravity="center_horizontal|center_vertical"
+                  android:tint="@color/greenColor"
+                  app:srcCompat="@drawable/ic_devicing" />
+              </RelativeLayout>
+
+              <TextView
+                style="@style/CaptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="Device" />
+
+              <TextView
+                style="@style/Subtitle2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="20" />
+            </LinearLayout>
+
+            <LinearLayout
+              android:layout_width="64dp"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingHorizontal="4dp">
+
+              <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_40"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                  android:layout_width="24dp"
+                  android:layout_height="24dp"
+                  android:layout_gravity="center_horizontal|center_vertical"
+                  android:tint="@color/blueColor"
+                  app:srcCompat="@drawable/ic_staging" />
+              </RelativeLayout>
+
+              <TextView
+                style="@style/CaptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="Stage" />
+
+              <TextView
+                style="@style/Subtitle2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="10" />
+            </LinearLayout>
+
+            <LinearLayout
+              android:layout_width="64dp"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingHorizontal="4dp">
+
+              <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_40"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                  android:layout_width="24dp"
+                  android:layout_height="24dp"
+                  android:layout_gravity="center_horizontal|center_vertical"
+                  android:tint="@color/redColor"
+                  app:srcCompat="@drawable/ic_putaway" />
+              </RelativeLayout>
+
+              <TextView
+                style="@style/CaptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="Put Away" />
+
+              <TextView
+                style="@style/Subtitle2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="35" />
+            </LinearLayout>
+          </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_alignParentBottom="true"
+          android:background="@drawable/border_bottom" />
+      </LinearLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/receivingAssets_rv_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+    </LinearLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="16dp"
+    app:backgroundTint="@color/themeColor"
+    app:layout_anchor="@id/outer_layout_id"
+    app:layout_anchorGravity="bottom|end"
+    app:srcCompat="@drawable/ic_addasset"
+    app:tint="@android:color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

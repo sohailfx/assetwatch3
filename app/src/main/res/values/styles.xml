@@ -92,6 +92,7 @@
     <item name="android:textColor">@color/blackColor</item>
     <item name="android:textSize">20sp</item>
   </style>
+
   <style name="MyThemeOverlay_Toolbar2" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
 
     <!-- This attributes is used by navigation icon and overflow icon -->

@@ -100,4 +100,6 @@
   <string name="dummy_content">DUMMY\nCONTENT</string>
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="title_activity_dashboard_activity">ScrollingActivity</string>
+  <string name="title_activity_receiving_assets_activity">ScrollingActivity</string>
 </resources>

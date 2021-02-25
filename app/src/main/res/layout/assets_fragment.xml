@@ -41,7 +41,6 @@
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <HorizontalScrollView
           android:id="@+id/hsv"
           android:layout_width="match_parent"
@@ -298,7 +297,6 @@
           </LinearLayout>
 
         </HorizontalScrollView>
-
         <View
           android:layout_width="match_parent"
           android:layout_height="1dp"

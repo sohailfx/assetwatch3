@@ -11,13 +11,35 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
-    <activity android:name=".create_asset_activity"></activity>
-    <activity android:name=".pdf_report_view" />
-    <activity android:name=".pdf_view" />
     <activity
-      android:name=".ScrollingActivity"
-      android:label="@string/title_activity_scrolling"
-      android:theme="@style/AppTheme.NoActionBar" />
+      android:name=".receiving_assets_activity"
+      android:label="@string/title_activity_receiving_assets_activity"
+      android:theme="@style/AppTheme.NoActionBar"></activity>
+    <activity
+      android:name=".dashboard_activity"
+      android:label="@string/title_activity_dashboard_activity"
+      android:theme="@style/AppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".create_asset_activity" />
+    <activity android:name=".pdf_report_view" />
+    <activity android:name=".pdf_view">
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data
+          android:host="www.example.com"
+          android:scheme="http" />
+        <data android:scheme="https" />
+      </intent-filter>
+    </activity>
     <activity android:name=".report_create_activity" />
     <activity android:name=".activity_edit_asset" />
     <activity android:name=".MainActivity">

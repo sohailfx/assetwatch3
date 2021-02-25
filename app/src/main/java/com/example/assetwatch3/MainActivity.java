@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
   setContentView(R.layout.activity_main);
   BottomNavigationView bottomView = findViewById(R.id.bottom_navigation);
   bottomView.setOnNavigationItemSelectedListener(navListener);
-  getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AssetsFragment()).commit();
+  getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Assets_Fragment()).commit();
   bottomView.getMenu().findItem(R.id.nav_assets).setChecked(true);
  }
 
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
        selectedFragment = new HomeFragment();
        break;
       case R.id.nav_assets:
-       selectedFragment = new AssetsFragment();
+       selectedFragment = new Assets_Fragment();
        break;
       case R.id.nav_map:
        selectedFragment = new MapFragment();

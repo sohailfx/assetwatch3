@@ -44,6 +44,7 @@ public class pdf_view extends AppCompatActivity {
 
   String url1 = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
   String url2 = "http://157.119.108.41:6061/sensornet/Mockups/esol2/js/installationreport.pdf";
+  String url3 = "file:///android_asset/installationreport.pdf";
   String finalUrl = "http://drive.google.com/viewerng/viewer?embedded=true&url=" + url2;
 
   mWebView.loadUrl(finalUrl);

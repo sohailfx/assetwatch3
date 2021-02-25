@@ -1,7 +1,6 @@
 package com.example.assetwatch3;
 
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Asset_List_RV_Adapter extends RecyclerView.Adapter<Asset_List_RV_Adapter.AssetList_ViewHolder> {
+public class Rec_Assets_RV_Adapter extends RecyclerView.Adapter<Rec_Assets_RV_Adapter.AssetList_ViewHolder> {
  private ArrayList<Asset_Item_Model> mAssetList;
  private OnItemClickListener mListener;
 
@@ -40,7 +39,6 @@ public class Asset_List_RV_Adapter extends RecyclerView.Adapter<Asset_List_RV_Ad
    mAssetNumber_tv = itemView.findViewById(R.id.AssetNumber_tv);
    mAssetReadTime_tv = itemView.findViewById(R.id.AssetReadTimeStamp_tv);
    mAssetSubCategory_tv = itemView.findViewById(R.id.AssetSubCategory_tv);
-   mAssetDescription_tv = itemView.findViewById(R.id.AssetDescription_tv);
    itemView.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
@@ -55,14 +53,14 @@ public class Asset_List_RV_Adapter extends RecyclerView.Adapter<Asset_List_RV_Ad
   }
  }
 
- public Asset_List_RV_Adapter(ArrayList<Asset_Item_Model> assetList) {
+ public Rec_Assets_RV_Adapter(ArrayList<Asset_Item_Model> assetList) {
   mAssetList = assetList;
  }
 
  @NonNull
  @Override
  public AssetList_ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-  View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.asset_item_model, parent, false);
+  View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.rec_asset_item_model, parent, false);
   AssetList_ViewHolder evh = new AssetList_ViewHolder(v, mListener);
   return evh;
  }
@@ -97,13 +95,13 @@ public class Asset_List_RV_Adapter extends RecyclerView.Adapter<Asset_List_RV_Ad
   } else if (status.equals("tag")) {
    holder.mAssetStatus_image.setImageResource(R.drawable.ic_tagging);
    holder.mAssetStatus_image.setColorFilter(ContextCompat.getColor(holder.mAssetStatus_image.getContext(), R.color.pinkColor));
-  }else if (status.equals("device")) {
+  } else if (status.equals("device")) {
    holder.mAssetStatus_image.setImageResource(R.drawable.ic_devicing);
    holder.mAssetStatus_image.setColorFilter(ContextCompat.getColor(holder.mAssetStatus_image.getContext(), R.color.orangeColor));
-  }else if (status.equals("stage")) {
+  } else if (status.equals("stage")) {
    holder.mAssetStatus_image.setImageResource(R.drawable.ic_staging);
    holder.mAssetStatus_image.setColorFilter(ContextCompat.getColor(holder.mAssetStatus_image.getContext(), R.color.blueColor));
-  }else if (status.equals("putaway")) {
+  } else if (status.equals("putaway")) {
    holder.mAssetStatus_image.setImageResource(R.drawable.ic_putaway);
    holder.mAssetStatus_image.setColorFilter(ContextCompat.getColor(holder.mAssetStatus_image.getContext(), R.color.darkGreenColor));
   } else {
@@ -111,10 +109,8 @@ public class Asset_List_RV_Adapter extends RecyclerView.Adapter<Asset_List_RV_Ad
    holder.mAssetStatus_image.setColorFilter(ContextCompat.getColor(holder.mAssetStatus_image.getContext(), R.color.greyColor));
   }
   holder.mAssetNumber_tv.setText(currentItem.getAssetNumber_tv());
-
-   holder.mAssetReadTime_tv.setText(currentItem.getAssetReadTime_tv());
+  holder.mAssetReadTime_tv.setText(currentItem.getAssetReadTime_tv());
   holder.mAssetSubCategory_tv.setText(currentItem.getAssetSubCategory_tv());
-  holder.mAssetDescription_tv.setText(currentItem.getAssetDescription_tv());
  }
 
  @Override
